@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-custom-import-path-transform",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "description": "Babel plugin to dynamically transform the path in require() and ES6 import",
   "repository": {
