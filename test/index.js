@@ -9,7 +9,7 @@ describe('Babel plugin module alias', () => {
             [
                 plugin,
                 {
-                    replaceFunc: './test/replace/replaceFunc.js',
+                    transformImportPath: './test/replace/replaceFunc.js',
                     replaceHandlerName: 'replaceImport',
                     resolveFrom: '"."',
                 },
