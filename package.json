@@ -2,13 +2,13 @@
     "name": "babel-plugin-custom-import-path-transform",
     "version": "1.0.0",
     "main": "lib/index.js",
-    "description": "Babel plugin to dynamically rewrite the path in require() and ES6 import",
+    "description": "Babel plugin to dynamically transform the path in require() and ES6 import",
     "repository": {
         "type": "git",
-        "url": "https://github.com/liady/babel-plugin-module-rewrite.git"
+        "url": "https://github.com/cermakjiri/babel-plugin-module-rewrite.git"
     },
     "author": {
-        "name": "Liad Yosef"
+        "name": "Jiří Čermák"
     },
     "license": "MIT",
     "keywords": [
@@ -33,10 +33,10 @@
     },
     "scripts": {
         "compile": "cross-env NODE_ENV=production babel src --out-dir lib",
-        "test": "cross-env NODE_ENV=test npm run test:suite",
+        "test": "cross-env NODE_ENV=test yarn test:suite",
         "test:suite": "mocha --compilers js:@babel/register",
-        "test:watch": "npm run test:suite -- -w",
-        "prepublish": "npm run compile"
+        "test:watch": "yarn test:suite -- -w",
+        "prepublish": "yarn compile"
     },
     "publishConfig": {
         "access": "public"

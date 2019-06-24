@@ -1,18 +1,20 @@
 /* eslint-env mocha */
-import path from 'path';
 import assert from 'assert';
-import { transform } from 'babel-core';
+import { transform } from '@babel/core';
 import plugin from '../src';
 
 describe('Babel plugin module alias', () => {
     const transformerOpts = {
         plugins: [
-            [plugin, {
-                replaceFunc: './test/replace/replaceFunc.js',
-                replaceHandlerName: 'replaceImport',
-                resolveFrom: '"."'
-            }]
-        ]
+            [
+                plugin,
+                {
+                    replaceFunc: './test/replace/replaceFunc.js',
+                    replaceHandlerName: 'replaceImport',
+                    resolveFrom: '"."',
+                },
+            ],
+        ],
     };
 
     describe('should alias a known path', () => {
